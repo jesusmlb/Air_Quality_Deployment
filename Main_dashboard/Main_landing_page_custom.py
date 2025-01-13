@@ -6,7 +6,7 @@ from datetime import datetime
 
 # Configure the Streamlit page
 st.set_page_config(
-    page_title="Mexico AQI Monitor",
+    page_title="Mexico City Air Quality Forecast",
     page_icon="🌎",
     layout="wide",
 )
@@ -93,7 +93,7 @@ def main():
     # Sidebar
     with st.sidebar:
         # Title with emoji
-        st.title("🌍 Mexico AQI Monitor")
+        st.title("🌍 Mexico City Air Quality Forecast")
         st.markdown("---")
 
         # Language selector
@@ -144,15 +144,15 @@ def main():
         st.markdown("### ℹ️ About")
         if st.session_state.language == 'en':
             st.markdown("""
-                This dashboard shows real-time Air Quality Index (AQI) data
-                for major AQI stations in Mexico. Data updates based on hourly readings.
+                This dashboard shows real-time Air and Health Index data
+                for major stations in Mexico City. Data updates based on hourly readings.
 
-                Made with ❤️ for Mexico
+                Made with ❤️ for Mexico City
             """)
         else:
             st.markdown("""
-                Este panel muestra datos del Índice de Calidad del Aire (AQI)
-                en tiempo real para las principales estaciones de AQI en México.
+                Este panel muestra datos del Índice Aire y Salud 
+                en tiempo real para las principales estaciones en México.
                 Los datos se actualizan según las lecturas por hora.
 
                 Hecho con ❤️ para México
