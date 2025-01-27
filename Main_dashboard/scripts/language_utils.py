@@ -44,6 +44,7 @@ def get_text(key, language):
             'en': 'Air and Health Index Heatmap of Mexico Monitoring Stations',
             'es': 'Mapa de Calor Índice Aire y Salud de Estaciones de Monitoreo'
         },
+
         # AQI Status translations
         'good': {
             'en': 'Good',
@@ -68,8 +69,28 @@ def get_text(key, language):
         'nodata': {
             'en': 'No data or under maintenance',
             'es': 'Sin datos o en mantenimiento'
-            
         },
+        'moderate': {
+            'en': 'Moderate',
+            'es': 'Moderado'
+        },
+        'unhealthy_sensitive': {
+            'en': 'Unhealthy for Sensitive Groups',
+            'es': 'Poco saludable para grupos sensibles'
+        },
+        'unhealthy': {
+            'en': 'Unhealthy',
+            'es': 'Poco saludable'
+        },
+        'very_unhealthy': {
+            'en': 'Very Unhealthy',
+            'es': 'Muy poco saludable'
+        },
+        'hazardous': {
+            'en': 'Hazardous',
+            'es': 'Peligroso'
+        },
+
         # Station translations
         'Ajusco Medio': {
             'en': 'Ajusco Medio',
@@ -140,13 +161,16 @@ def get_text(key, language):
             'es': 'Pronostico de Calidad del Aire'
         },
         'air_quality_index': {
-            'en': 'Air Quality Index',
+            'en': 'Air and Health Index',
             'es': 'Índice de calidad del aire'
         },
-        ''
         'humidity': {
             'en': 'Humidity',
             'es': 'Humedad'
+        },
+        'relative_humidity': {
+            'en': 'Relative Humidity',
+            'es': 'Humedad relativa'
         },
         'pressure': {
             'en': 'Pressure',
@@ -155,6 +179,10 @@ def get_text(key, language):
         'wind_speed': {
             'en': 'Wind Speed',
             'es': 'Velocidad del viento'
+        },
+        'wind_direction': {
+            'en': 'Wind Direction',
+            'es': 'Dirección del viento'
         },
         'o3': {
             'en': 'Ozone',
@@ -297,4 +325,4 @@ def get_text(key, language):
         }
     }
     
-    return translations.get(key, {}).get(language, key)
+    return translations.get(key, {}).get(language, key) 
