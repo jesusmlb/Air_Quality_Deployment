@@ -1,7 +1,7 @@
 def get_text(key, language):
     translations = {
         'nav_title': {
-            'en': 'Mexico City Air Quality Forecast',
+            'en': 'Mexico City Air and Health Index Forecast',
             'es': 'Monitor del Índice Aire y Salud de México'
         },
         'select_page': {
@@ -44,7 +44,6 @@ def get_text(key, language):
             'en': 'Air and Health Index Heatmap of Mexico Monitoring Stations',
             'es': 'Mapa de Calor Índice Aire y Salud de Estaciones de Monitoreo'
         },
-
         # AQI Status translations
         'good': {
             'en': 'Good',
@@ -69,28 +68,8 @@ def get_text(key, language):
         'nodata': {
             'en': 'No data or under maintenance',
             'es': 'Sin datos o en mantenimiento'
+            
         },
-        'moderate': {
-            'en': 'Moderate',
-            'es': 'Moderado'
-        },
-        'unhealthy_sensitive': {
-            'en': 'Unhealthy for Sensitive Groups',
-            'es': 'Poco saludable para grupos sensibles'
-        },
-        'unhealthy': {
-            'en': 'Unhealthy',
-            'es': 'Poco saludable'
-        },
-        'very_unhealthy': {
-            'en': 'Very Unhealthy',
-            'es': 'Muy poco saludable'
-        },
-        'hazardous': {
-            'en': 'Hazardous',
-            'es': 'Peligroso'
-        },
-
         # Station translations
         'Ajusco Medio': {
             'en': 'Ajusco Medio',
@@ -161,16 +140,13 @@ def get_text(key, language):
             'es': 'Pronostico de Calidad del Aire'
         },
         'air_quality_index': {
-            'en': 'Air and Health Index',
+            'en': 'Air Quality Index',
             'es': 'Índice de calidad del aire'
         },
+        ''
         'humidity': {
             'en': 'Humidity',
             'es': 'Humedad'
-        },
-        'relative_humidity': {
-            'en': 'Relative Humidity',
-            'es': 'Humedad relativa'
         },
         'pressure': {
             'en': 'Pressure',
@@ -179,10 +155,6 @@ def get_text(key, language):
         'wind_speed': {
             'en': 'Wind Speed',
             'es': 'Velocidad del viento'
-        },
-        'wind_direction': {
-            'en': 'Wind Direction',
-            'es': 'Dirección del viento'
         },
         'o3': {
             'en': 'Ozone',
@@ -237,7 +209,7 @@ def get_text(key, language):
         },
         'genaral_population': {
             'en': 'General Population:',
-            'es': 'Población General:'
+            'es': 'Población en General:'
         },
         'sensitive_population': {
             'en': 'Sensitive Population:',
@@ -299,6 +271,30 @@ def get_text(key, language):
             'en': 'Mexico City',
             'es': 'Ciudad de México'
         },  
+        'best_time': {
+            'en': 'Best time to be outside',
+            'es': 'El mejor momento para estar al aire libre'
+        },
+        'worst_time': {
+            'en': 'Worst time to be outside',
+            'es': 'El peor momento para estar al aire libre'
+        },
+        'select_time': {
+            'en': 'Select time period',
+            'es': 'Seleccionar el período de tiempo'
+        },
+        'select_group': {
+            'en': 'Select group',
+            'es': 'Seleccionar grupo'
+        },
+        'people_cardiovascular': {
+            'en': 'People with cardiovascular or respiratory diseases and those over 60 years of age',
+            'es': 'Personas con enfermedades cardiovasculares o respiratorias y mayores de 60 años'
+        },
+        'children_and_pregnant': {
+            'en': 'Children under 12 years old and pregnant people',
+            'es': 'Menores de 12 años y personas gestantes'
+        }
     }
     
-    return translations.get(key, {}).get(language, key) 
+    return translations.get(key, {}).get(language, key)
