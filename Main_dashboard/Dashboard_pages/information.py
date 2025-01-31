@@ -51,14 +51,14 @@ def information_page():
     col1, col2 = st.columns(2)
     
     with col1:
-        st.info("🌟 Best time to be outside\n\n"
+        st.info(f"🌟 {get_text('best_time'), lang}\n\n"
                 "**8:00 AM - 11:00 AM**\n\n"
-                "Air quality: Good")
+                f"{get_text('current_forecast'), lang}: Good")
     
     with col2:
-        st.info("⚠️ Worst time to be outside\n\n"
-                  "**2:00 PM - 5:00 PM**\n\n"
-                  "Air quality: Bad")
+        st.info(f"⚠️ {get_text('worst_time'), lang}\n\n"
+                "**2:00 PM - 5:00 PM**\n\n"
+                f"{get_text('current_forecast'), lang}: Bad")
     
     # Create two columns for user selection of time and group
     col1, col2 = st.columns(2)
@@ -108,9 +108,7 @@ def information_page():
     st.table(styled_df)
     
     # Add explanatory notes
-    st.markdown("""
-    Data is sourced from the monitoring stations in Mexico City and the application is built following the [guidelines from the local authorities](https://dof.gob.mx/nota_detalle.php?codigo=5715154&fecha=25/01/2024#gsc.tab=0). The 24-hour forecast for the Air and Health Index is based on a machine learning model which has 85% accuracy. The Air and Health Index and associated messages are only for information purposes to warn the population. Please consider personal health conditions and stay up-to-date with local authorities and health providers.
-    """)
+    st.markdown(get_text('notes', lang))
 
 if __name__ == "__main__":
     st.set_page_config(

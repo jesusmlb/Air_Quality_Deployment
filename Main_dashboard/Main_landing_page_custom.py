@@ -5,8 +5,9 @@ from scripts.data_handler import get_current_hour_data, get_all_stations
 from datetime import datetime
 
 # Configure the Streamlit page
+lang = st.session_state.language
 st.set_page_config(
-    page_title="Mexico City Air Quality Forecast",
+    page_title=get_text('nav_title', lang),
     page_icon="🌎",
     layout="wide"
 )
