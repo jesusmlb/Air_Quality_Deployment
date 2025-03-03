@@ -400,7 +400,7 @@ stations = ['MER', 'BJU', 'PED', 'UIZ']
 #BASE_DIR / 'Dashboard_data' / 'current_data' / f'{i}_merged_imputed.xlsx'
 # Load all models at once at the beginning
 models = {
-    f"{poll}_{station}": lgb.Booster(model_str=pickle.load(open(BASE_DIR / '4. Model Development' / 'models' / f"{poll}_{station}_model_.pkl", "rb"))._handle)
+    f"{poll}_{station}": lgb.Booster(model_str=pickle.load(open(BASE_DIR / '4.Model_Development' / 'models' / f"{poll}_{station}_model_.pkl", "rb"))._handle)
     for station in stations
     for poll in pollutants
 }
@@ -408,7 +408,7 @@ models = {
 for station_name in stations:
     
     # Let's load our dataset
-    current_data = pd.read_excel(BASE_DIR / '2. Data Collection' / f"{station_name}_merged_imputed.xlsx")
+    current_data = pd.read_excel(BASE_DIR / '2.Data_Collection' / f"{station_name}_merged_imputed.xlsx")
     
     # We need only 72 hours from our previous dataset
     last_rows = current_data.tail(72)
@@ -506,4 +506,4 @@ for station_name in stations:
         hourly_dataframe["Air_index"] = max_value
 
     # Save the dataframe
-    hourly_dataframe.to_excel(BASE_DIR / '5. Model Deployment' / 'Dashboard_data' / 'forecast_data' / f"{station_name}_forecast.xlsx", index=False)
+    hourly_dataframe.to_excel(BASE_DIR / '5.Model_Deployment' / 'Dashboard_data' / 'forecast_data' / f"{station_name}_forecast.xlsx", index=False)

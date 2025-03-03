@@ -50,7 +50,7 @@ stations_data = pd.DataFrame()
 
 # Load the data
 for i in list(list_of_stations.keys()):
-    df_pollutants = pd.read_excel(BASE_DIR_D / '2. Data Collection' / f'{i}_merged_imputed.xlsx')
+    df_pollutants = pd.read_excel(BASE_DIR_D / '2.Data_Collection' / f'{i}_merged_imputed.xlsx')
     if 'index' in df_pollutants.columns:
         df_pollutants = df_pollutants.drop('index', axis=1)
     df_pollutants['station'] = list_of_stations[i]
