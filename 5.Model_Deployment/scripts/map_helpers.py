@@ -210,7 +210,7 @@ def classical_map(data):
 
     popup = folium.GeoJsonPopup(
         fields=["NOMGEO", "aqi"],
-        aliases=["Municipality", "AQI"],
+        aliases=["Municipality", "Air and Health Index"],
         localize=True,
         labels=True,
         style="background-color: yellow;",
