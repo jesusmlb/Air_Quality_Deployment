@@ -288,8 +288,8 @@ def get_text(key, language):
             'es': 'Índice'
         }, 
         'selectzone': {
-            'en': 'Can you select the zone?',
-            'es': '¿Puedes seleccionar la zona?'
+            'en': 'Please select the zone?',
+            'es': '¿Por favor seleccionar la zona?'
         },
         'forexample': {
             'en': 'E.g. Benito Juarez',

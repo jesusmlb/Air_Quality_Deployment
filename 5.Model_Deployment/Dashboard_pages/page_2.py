@@ -329,7 +329,7 @@ def new_home():
             f"{get_text('selectzone', lang)}",
             sorted(list(data["station"].unique())),  # Sort the list of stations alphabetically
             label_visibility=st.session_state.visibility,
-            index=None,
+            index=0,
             placeholder=f"{get_text('forexample', lang)}",
             disabled=st.session_state.disabled,
         )

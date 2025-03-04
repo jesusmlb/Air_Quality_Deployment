@@ -396,7 +396,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent.parent
 pollutants = ['CO', 'NO2', 'O3', 'PM10', 'PM25', 'SO2']
 
 # List of our stations
-stations = ['MER', 'BJU', 'PED', 'UIZ']
+stations = ['MER', 'BJU', 'PED', 'TLA']
 #BASE_DIR / 'Dashboard_data' / 'current_data' / f'{i}_merged_imputed.xlsx'
 # Load all models at once at the beginning
 models = {

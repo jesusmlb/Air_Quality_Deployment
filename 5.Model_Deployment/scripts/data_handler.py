@@ -21,7 +21,7 @@ STATION_COORDINATES = {
 
 STATION_ACRONYMS = {
     "Pedregal": "PED",
-    "UAM Iztapalapa": "UIZ",
+    "Tlalnepantla": "TLA",
     "Benito Juarez": "BJU",
     "Merced": "MER"
 }
@@ -76,7 +76,7 @@ def get_station_coordinates(station_name):
     """Get coordinates for a specific station"""
     return STATION_COORDINATES.get(station_name)
 
-def get_some_stations(stations=["Benito Juarez", "Merced", "Pedregal", "UAM Iztapalapa"]):
+def get_some_stations(stations=["Benito Juarez", "Merced", "Pedregal", "Tlalnepantla"]):
     return list(filter(lambda x: x in stations, list(STATION_COORDINATES.keys())))
 
 def get_all_stations():

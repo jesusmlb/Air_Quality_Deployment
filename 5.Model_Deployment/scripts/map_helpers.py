@@ -37,9 +37,9 @@ df = pd.DataFrame(data)
 
 # Let's get the current levels of the pollutants from all the stations
 list_of_stations = {"PED": "Pedregal",
-                   "UIZ": "UAM Iztapalapa",
                    "BJU": "Benito Juarez",
-                   "MER": "Merced"}
+                   "MER": "Merced",
+                   "TLA": "Tlalnepantla"}
 
 # Now let's extract the info from the xlsx files
 
@@ -86,6 +86,7 @@ municipalities_aqi = {
     "Benito Juarez": {"station": "Benito Juarez", "aqi": 1},
     "Cuauhtemoc": {"station": "Cuauhtemoc", "aqi": "null"},
     "Miguel Hidalgo": {"station": "Miguel Hidalgo", "aqi": "null"},
+    "Tlalnepantla": {"station": "Tlalnepantla", "aqi": 1},
     "Venustiano Carranza": {"station": "Merced", "aqi": 1},
 }
 
@@ -189,8 +190,6 @@ def wkt_to_geojson(df):
 
 # Usage:
 geojson_data = wkt_to_geojson(df)
-
-#lang = st.session_state.language
 
 colormap = branca.colormap.LinearColormap(
     vmin=0,

@@ -153,7 +153,7 @@ def information_page():
     
     # Let's get the current levels of the pollutants from all the stations
     list_of_stations = {"PED": "Pedregal",
-                    "UIZ": "UAM Iztapalapa",
+                    "TLA": "Tlalnepantla",
                     "BJU": "Benito Juarez",
                     "MER": "Merced"}
 
