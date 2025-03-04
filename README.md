@@ -11,7 +11,7 @@ This repository contains the deployment phase of our Mexico City Air Quality Pre
 - Meet WCAG 2.1 AA accessibility standards
 - Handle real-time data from 30+ monitoring stations
 
-## 🚀 Current Phase: Streamlit Deployment
+## 🚀 Current Phase: Streamlit Deployment 
 We are currently focusing on building a user-friendly web interface using Streamlit. This phase includes:
 
 - [ ] Basic dashboard setup
