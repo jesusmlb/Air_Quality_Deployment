@@ -1,8 +1,18 @@
-# Mexico City Air Quality Prediction System 🌍
+# Mexico City Air Quality Prediction System 
 > Citizens with accurate air quality forecasts and personalized health recommendations
 
-## Project Overview
-This repository contains the deployment phase of our Mexico City Air Quality Prediction System, focusing on the Streamlit application development. Our goal is to provide accurate 24-hour air quality forecasts while making the information accessible and actionable for all citizens.
+## 🌍 Project Overview
+This repository is part of the Omdena Local Chapter project "Air Quality Prediction and Personalized Health Recommendations for Mexico City." It contains all resources developed by our team for this initiative.
+
+📌 Project Website: https://www.omdena.com/chapter-challenges/air-quality-prediction-and-personalized-health-recommendations-for-mexico-city
+
+📂 Repository Structure:
+- Official Guidelines and Documents: Guidelines provided by the Mexican government regarding the standards which was followed during the development
+- Data Collection: Air quality data gathered from all monitoring stations, along with festivals and weather data.
+- Data Analysis: Insights and trends derived from the collected data.
+- Model Development: Training and fine-tuning model for forecasting major pollutants.
+- Model Deployment: A Streamlit application that provides accurate 24-hour air quality forecasts, ensuring accessibility and actionable insights for all citizens.
+Our goal is to leverage data-driven approaches to enhance air quality awareness and provide personalized health recommendations for Mexico City.
 
 ## 🎯 Key Objectives
 - Achieve 85% accuracy in 24-hour forecasts for major pollutants
