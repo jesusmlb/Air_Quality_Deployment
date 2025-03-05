@@ -394,11 +394,19 @@ def new_home():
             </style>
             """, unsafe_allow_html=True)
 
-        app_path = 'http://localhost:8501'
-        info_page_file_path = 'Dashboard_pages/information.py'
-        fore_page_file_path = 'Dashboard_pages/forecast.py'
-        info_page = info_page_file_path.split('/')[1][0:-3]
-        fore_page = fore_page_file_path.split('/')[1][0:-3]
+        #app_path = 'http://localhost:8501'
+        #info_page_file_path = 'Dashboard_pages/information.py'
+        #fore_page_file_path = 'Dashboard_pages/forecast.py'
+        #info_page = info_page_file_path.split('/')[1][0:-3]
+        #fore_page = fore_page_file_path.split('/')[1][0:-3]
+
+        # Extract query parameters to determine the current page
+        query_params = st.query_params
+        page = query_params.get("page", ["home"])[0]
+
+        # Define page paths dynamically
+        info_page = "information"
+        fore_page = "forecast"
         
         select_index = get_highest_aqi(data, selected_zone)
         forecast_index = get_highest_aqi(forecast, selected_zone, forecast=True)
@@ -418,10 +426,10 @@ def new_home():
             <span style="display: inline-block; padding: 5px 10px; border-radius: 20px; background-color: {get_color(forecast_index[0])}; color: black;">{get_index(forecast_index[0], lang)}</span> 
             -
             <span style="display: inline-block; padding: 5px 10px; border-radius: 20px; background-color: {get_color(forecast_index[1])}; color: black;">{get_index(forecast_index[1], lang)}</span>
-            (<a href="{app_path}/{fore_page}" style="color: black; text-decoration: underline;">{get_text("click_here", lang)}</a>)
+            (<a href="?page={fore_page}" style="color: black; text-decoration: underline;">{get_text("click_here", lang)}</a>)
             <br><br>
             {get_text("health_more_details", lang)}
-            (<a href="{app_path}/{info_page}" style="color: black; text-decoration: underline;">{get_text("click_here", lang)}</a>)
+            (<a href="?page={info_page}" style="color: black; text-decoration: underline;">{get_text("click_here", lang)}</a>)
             </div>
 
             """,
