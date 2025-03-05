@@ -7,7 +7,8 @@ import locale
 import pandas as pd
 from pathlib import Path
 from streamlit_folium import folium_static, st_folium
-from streamlit.components.v1 import html
+from streamlit.components.v1 import HTML
+from Dashboard_pages import page_2, forecast, information
 from scripts.map_helpers import classical_map, geojson_data, stations_data, forecast_data
 from scripts.prediction import calculate_pollutant_weighted_average, get_highest_aqi
 from scripts.language_utils import get_text
@@ -435,7 +436,14 @@ def new_home():
             """,
             unsafe_allow_html=True,
         )
+
+
+        if page == "forecast":
+            forecast.home()  # 🚀 Call the function when page=forecast
         
+        elif page == "information":
+            information.information_page()
+            
         # Custom CSS for the table
         #### Need to include the weighted average of the 12h and the average of 24h
         st.markdown(
