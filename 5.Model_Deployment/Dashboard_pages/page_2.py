@@ -8,7 +8,7 @@ import pandas as pd
 from pathlib import Path
 from streamlit_folium import folium_static, st_folium
 from streamlit.components.v1 import HTML
-from Dashboard_pages import page_2, forecast, information
+from Dashboard_pages import forecast, information
 from scripts.map_helpers import classical_map, geojson_data, stations_data, forecast_data
 from scripts.prediction import calculate_pollutant_weighted_average, get_highest_aqi
 from scripts.language_utils import get_text
