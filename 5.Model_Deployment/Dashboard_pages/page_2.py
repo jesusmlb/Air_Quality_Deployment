@@ -415,8 +415,7 @@ def new_home():
             <span style="display: inline-block; padding: 5px 10px; border-radius: 20px; background-color: {get_color(forecast_index[1])}; color: black;">{get_index(forecast_index[1], lang)}</span>
             ({get_text("click_here_f", lang)})
             <br><br>
-            {get_text("health_more_details", lang)}
-            ({get_text("click_here_i", lang)})
+            {get_text("health_more_details", lang)} {get_text("click_here_i", lang)}
             </div>
 
             """,
