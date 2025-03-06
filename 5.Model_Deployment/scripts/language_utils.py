@@ -271,9 +271,13 @@ def get_text(key, language):
             'en': 'Recommendations for the protection of your health:',
             'es': 'Recomendaciones para la protección de tu salud:'
         },
-        'click_here': {
-            'en': 'Link for more details',
-            'es': 'Enlace para más detalles'
+        'click_here_f': {
+            'en': 'Please go to Forecast in the panel for more details',
+            'es': 'Por favor, vaya a Pronóstico en el panel para más detalles'
+        },
+        'click_here_i': {
+            'en': 'Please go to Information in the panel for more details',
+            'es': 'Por favor, vaya a Información en el panel para más detalles'
         },
         'recommend': {
             'en': 'Recommendations for:',
