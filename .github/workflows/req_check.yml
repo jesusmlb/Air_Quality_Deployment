@@ -32,7 +32,7 @@ jobs:
             git config --global user.email "github-actions[bot]@users.noreply.github.com"
             git add 5.Model_Deployment/requirements.txt
             git commit -m "Auto-update requirements.txt"
-            git push origin HEAD:main
+            git push origin main
             echo "UPDATE_NEEDED=true" >> $GITHUB_ENV
           else
             echo "No changes in requirements.txt"
