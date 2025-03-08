@@ -1,4 +1,4 @@
-name: Check Requirements
+name: Update Requirements
 
 on:
   pull_request:
@@ -6,7 +6,7 @@ on:
       - main
 
 jobs:
-  check-requirements:
+  update-requirements:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Repository
@@ -23,6 +23,16 @@ jobs:
       - name: Generate Requirements from Code
         run: pipreqs . --force --ignore .github --savepath generated_requirements.txt
 
-      - name: Compare Requirements
+      - name: Update requirements.txt if changed
         run: |
-          diff -u <(sort 5.Model_Deployment/requirements.txt) <(sort generated_requirements.txt) || (echo "Mismatch in requirements!" && exit 1)
+          if ! diff -u <(sort 5.Model_Deployment/requirements.txt) <(sort generated_requirements.txt); then
+            echo "Updating requirements.txt"
+            mv generated_requirements.txt 5.Model_Deployment/requirements.txt
+            git config --global user.name "github-actions[bot]"
+            git config --global user.email "github-actions[bot]@users.noreply.github.com"
+            git add 5.Model_Deployment/requirements.txt
+            git commit -m "Auto-update requirements.txt"
+            git push
+          else
+            echo "No changes in requirements.txt"
+          fi
