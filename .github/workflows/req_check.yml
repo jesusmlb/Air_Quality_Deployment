@@ -33,6 +33,15 @@ jobs:
             git add 5.Model_Deployment/requirements.txt
             git commit -m "Auto-update requirements.txt"
             git push
+            echo "UPDATE_NEEDED=true" >> $GITHUB_ENV
           else
             echo "No changes in requirements.txt"
+            echo "UPDATE_NEEDED=false" >> $GITHUB_ENV
           fi
+          
+      - name: Comment on the merged PR if requirements were updated
+        if: env.UPDATE_NEEDED == 'true'
+        uses: mshick/add-pr-comment@v2
+        with:
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
+          message: "🚨 Heads up! `requirements.txt` has been updated automatically in `main` after merging this PR. Please remember to run `pipreqs . --force` and update your local `requirements.txt` file before submitting future PRs. ✅"
